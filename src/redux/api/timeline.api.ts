@@ -12,7 +12,7 @@ export const timelineApi = createApi({
     }),
     getPosts: builder.query({
       query: () => ({
-        url: "/comments",
+        url: "/posts",
         method: "GET",
       }),
     }),

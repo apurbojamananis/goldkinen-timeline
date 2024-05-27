@@ -1,7 +1,10 @@
+import Timeline from "./components/Timeline/Timeline";
+
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <h1>This is Home Page</h1>
+      <Timeline />
     </div>
   );
 }
