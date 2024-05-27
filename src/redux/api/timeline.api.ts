@@ -1,22 +1,23 @@
+import { TComment, TPost, TUser } from "@/Types/types";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const timelineApi = createApi({
+export const timelineApiSlice = createApi({
   reducerPath: "timelineApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://jsonplaceholder.typicode.com" }),
   endpoints: (builder) => ({
-    getUsers: builder.query({
+    getUsers: builder.query<TUser[], void>({
       query: () => ({
         url: "/users",
         method: "GET",
       }),
     }),
-    getPosts: builder.query({
+    getPosts: builder.query<TPost[], void>({
       query: () => ({
         url: "/posts",
         method: "GET",
       }),
     }),
-    getComments: builder.query({
+    getComments: builder.query<TComment[], void>({
       query: () => ({
         url: "/comments",
         method: "GET",
@@ -25,4 +26,4 @@ export const timelineApi = createApi({
   }),
 });
 
-export const { useGetUsersQuery, useGetPostsQuery, useGetCommentsQuery } = timelineApi;
+export const { useGetUsersQuery, useGetPostsQuery, useGetCommentsQuery } = timelineApiSlice;

@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { timelineApi } from "./api/timeline.api";
+import { timelineApiSlice } from "./api/timeline.api";
 
 export const store = configureStore({
   reducer: {
-    [timelineApi.reducerPath]: timelineApi.reducer,
+    [timelineApiSlice.reducerPath]: timelineApiSlice.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(timelineApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(timelineApiSlice.middleware),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
