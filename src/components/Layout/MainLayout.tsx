@@ -10,10 +10,10 @@ const MainLayout = () => {
         <div className="col-span-3 bg-red-300">
           <h1>left side</h1>
         </div>
-        <div className="col-span-7">
+        <div className="col-span-6">
           <Outlet />
         </div>
-        <div className="col-span-2 bg-green-200">
+        <div className="col-span-3 bg-green-200">
           <h1>Side bar</h1>
         </div>
       </section>

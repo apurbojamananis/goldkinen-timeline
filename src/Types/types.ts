@@ -41,3 +41,8 @@ export interface TCombinedData extends TPost {
   userInfo: TUser;
   comments: TComment[];
 }
+
+
+export interface IconProps {
+  onClick?: () => void; 
+}

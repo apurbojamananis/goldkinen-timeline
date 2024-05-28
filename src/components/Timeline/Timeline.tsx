@@ -2,7 +2,7 @@ import { selectAllData } from "@/redux/Features/selectors";
 import { useGetCommentsQuery, useGetPostsQuery, useGetUsersQuery } from "@/redux/api/timeline.api";
 import { RootState } from "@/redux/store";
 import { useSelector } from "react-redux";
-import TimelineCard from "./TimelineCard";
+import TimelineCard from "../TimelineCard/TimelineCard";
 
 const Timeline = () => {
   const { isLoading: usersLoading, isError: usersError } = useGetUsersQuery(undefined);
@@ -12,11 +12,15 @@ const Timeline = () => {
   const combinedData = useSelector((state: RootState) => selectAllData(state));
 
   if (usersLoading || postsLoading || commentsLoading) {
-    return <div>Loading...</div>;
+    return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
   }
 
   if (usersError || postsError || commentsError) {
-    return <div>Error loading data</div>;
+    return (
+      <div className=" flex justify-center items-center min-h-screen">
+        Something went wrong! Please try again!
+      </div>
+    );
   }
 
   return (
