@@ -17,6 +17,7 @@ type TPost = {
 const TimelineCard = ({ post }: TPost) => {
   const [isLove, setIsLove] = useState(false);
   const [isShowComment, setIsShowComment] = useState(false);
+  const [showAllComments, setShowAllComments] = useState(false);
 
   const toggleSvg = () => {
     setIsLove(!isLove);
@@ -72,9 +73,19 @@ const TimelineCard = ({ post }: TPost) => {
           hidden: !isShowComment,
         })}
       >
-        {post.comments.map((comment: TComment) => (
-          <TimelineCardComment key={comment.id} comment={comment} />
-        ))}
+        {post.comments
+          .slice(0, showAllComments ? post.comments.length : 2)
+          .map((comment: TComment) => (
+            <TimelineCardComment key={comment.id} comment={comment} />
+          ))}
+        {!showAllComments && post.comments.length > 2 && (
+          <div
+            className="flex justify-center py-2 hover:underline"
+            onClick={() => setShowAllComments(true)}
+          >
+            <p className="text-gray-700 font-medium cursor-pointer">Show all comments</p>
+          </div>
+        )}
       </div>
     </div>
   );

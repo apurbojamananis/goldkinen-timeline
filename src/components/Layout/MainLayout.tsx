@@ -17,9 +17,6 @@ const MainLayout = () => {
           <h1>Side bar</h1>
         </div>
       </section>
-      <footer className="container">
-        <h2> this is footer</h2>
-      </footer>
     </>
   );
 };

@@ -19,9 +19,7 @@ export const selectAllData = createSelector(
 
         return {
           ...post,
-          userInfo: {
-            ...user,
-          },
+          userInfo: user,
           comments: postComments,
         };
       })
