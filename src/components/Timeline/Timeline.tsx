@@ -1,8 +1,8 @@
-import { TComment } from "@/Types/types";
 import { selectAllData } from "@/redux/Features/selectors";
 import { useGetCommentsQuery, useGetPostsQuery, useGetUsersQuery } from "@/redux/api/timeline.api";
 import { RootState } from "@/redux/store";
 import { useSelector } from "react-redux";
+import TimelineCard from "./TimelineCard";
 
 const Timeline = () => {
   const { isLoading: usersLoading, isError: usersError } = useGetUsersQuery(undefined);
@@ -19,27 +19,10 @@ const Timeline = () => {
     return <div>Error loading data</div>;
   }
 
-  console.log(combinedData);
-
   return (
     <div>
-      {combinedData.slice(0, 5).map((post) => (
-        <div key={post.id}>
-          <p>By {post.userInfo.username}</p>
-          <h3>Title: {post.title}</h3>
-          <p>Body: {post.body}</p>
-          <h4>Comments: </h4>
-          {post.comments.map((comment: TComment) => (
-            <div key={comment.id}>
-              <p>
-                <strong>Comment Name: {comment.name}</strong>
-              </p>
-              <p>
-                <strong>Comment Body: {comment.body}</strong>
-              </p>
-            </div>
-          ))}
-        </div>
+      {combinedData.slice(0, 20).map((post) => (
+        <TimelineCard key={post.id} post={post} />
       ))}
     </div>
   );

@@ -10,7 +10,7 @@ const MainLayout = () => {
         <div className="col-span-3 bg-red-300">
           <h1>left side</h1>
         </div>
-        <div className="col-span-7 bg-yellow-200">
+        <div className="col-span-7">
           <Outlet />
         </div>
         <div className="col-span-2 bg-green-200">
