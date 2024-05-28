@@ -9,6 +9,7 @@ import Comments from "@/utils/SVGImage/Comments";
 import HeartFilled from "@/utils/SVGImage/HeartFilled";
 import { cn } from "@/lib/utils";
 import { RandomNumber } from "@/utils/RandomNumber/RandomNumber";
+import { useToast } from "../ui/use-toast";
 
 type TPost = {
   post: TCombinedData;
@@ -16,14 +17,23 @@ type TPost = {
 
 const TimelineCard = ({ post }: TPost) => {
   const [isLove, setIsLove] = useState(false);
+  const [isShare, setIsShare] = useState(RandomNumber(100));
   const [isShowComment, setIsShowComment] = useState(false);
   const [showAllComments, setShowAllComments] = useState(false);
+  const { toast } = useToast();
 
   const toggleSvg = () => {
     setIsLove(!isLove);
   };
   const toggleComment = () => {
     setIsShowComment(!isShowComment);
+  };
+  const sharePost = () => {
+    setIsShare(() => isShare + 1);
+    toast({
+      title: "Thanks for sharing this post.",
+      duration: 1000,
+    });
   };
 
   return (
@@ -61,9 +71,9 @@ const TimelineCard = ({ post }: TPost) => {
             {post.comments.length} Comments
           </span>
         </div>
-        <div className="flex gap-2 items-center hover:text-red-500">
+        <div className="flex gap-2 items-center hover:text-red-500" onClick={sharePost}>
           <Share />
-          <span className=" text-gray-600 cursor-pointer hover:text-red-500">Share</span>
+          <span className=" text-gray-600 cursor-pointer "> {isShare} Share</span>
         </div>
       </div>
 

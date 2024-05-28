@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster";
 
 const MainLayout = () => {
   return (
@@ -12,6 +13,7 @@ const MainLayout = () => {
         </div>
         <div className="col-span-6">
           <Outlet />
+          <Toaster />
         </div>
         <div className="col-span-3 bg-green-200">
           <h1>Side bar</h1>
