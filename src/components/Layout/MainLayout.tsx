@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import LeftSidebar from "../LeftSidebar/LeftSidebar";
+import RightSidebar from "../RightSidebar/RightSidebar";
 
 const MainLayout = () => {
   return (
@@ -20,7 +21,7 @@ const MainLayout = () => {
           className="col-span-3 bg-white max-h-screen overflow-y-auto"
           style={{ position: "sticky", top: "0" }}
         >
-          <h1>Side bar</h1>
+          <RightSidebar />
         </div>
       </section>
     </div>
