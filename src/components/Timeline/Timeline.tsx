@@ -41,10 +41,10 @@ const Timeline = () => {
 
       {!showAllPost && combinedData.length > 20 && (
         <div
-          className="flex justify-center py-2 hover:underline"
+          className="flex justify-center pb-8 hover:underline"
           onClick={() => setShowAllPost(true)}
         >
-          <p className="text-gray-700 font-medium cursor-pointer">Show all Post</p>
+          <p className="text-lg text-gray-700 font-medium cursor-pointer">Show all Post</p>
         </div>
       )}
     </div>

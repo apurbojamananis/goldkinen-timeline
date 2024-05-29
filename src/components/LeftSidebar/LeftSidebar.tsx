@@ -11,60 +11,91 @@ import {
   VideoIcon,
 } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Link } from "react-router-dom";
 
 const LeftSidebar = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen py-5 px-5">
       <div>
         <div className=" pb-5 px-5 border-b border-gray-300">
-          <h2 className="text-xl font-bold uppercase px-2 py-1 bg-black text-white rounded inline-block">
+          <h2 className="text-xl font-bold uppercase px-2 py-1 bg-black text-white rounded inline-block cursor-pointer">
             GKT
           </h2>
         </div>
 
-        <ul className="flex flex-col gap-3 py-5 border-b border-gray-300 ">
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+        <ul className="flex flex-col gap-3 py-5 border-b border-gray-300 scroll-smooth">
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             {" "}
             <HomeIcon />
             <span>Home</span>
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             {" "}
             <BellRing />
             <span>Notification</span>
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             <BookMarkedIcon />
             <span>Bookmarks</span>
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             <GroupIcon />
             <span>Communities</span>
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             <ListIcon />
             <span>Reading List</span>
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             <VideoIcon />
             <span>Videos</span>
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             <Building2 />
             <span>About</span>
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             <Contact2 />
             <span>Contact</span>
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             <BadgeHelp />
             Guides
-          </li>
-          <li className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center">
+          </Link>
+          <Link
+            to="/"
+            className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+          >
             <User />
             Profile
-          </li>
+          </Link>
         </ul>
       </div>
       <div className="flex items-center gap-2">

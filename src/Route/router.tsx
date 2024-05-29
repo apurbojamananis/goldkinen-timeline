@@ -1,4 +1,3 @@
-// import App from "@/App";
 import App from "@/App";
 import ErrorPage from "@/Pages/ErrorPage/ErrorPage";
 import Test from "@/Pages/test/Test";
@@ -21,9 +20,5 @@ export const router = createBrowserRouter([
         element: <Test />,
       },
     ],
-  },
-  {
-    path: "test2",
-    element: <Test />,
   },
 ]);

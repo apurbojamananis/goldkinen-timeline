@@ -37,11 +37,11 @@ const TimelineCard = ({ post }: TPost) => {
   };
 
   return (
-    <div className="p-5 my-3 mx-1 border border-gray-300 bg-white">
+    <div className="p-5 mt-1 mb-3 mx-1 border border-gray-300 bg-white rounded">
       <div className="flex items-center justify-between gap-2 ">
         <div className="flex items-center gap-2">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src={`https://randomuser.me/api/portraits/men/${RandomNumber(100)}.jpg`} />
 
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
@@ -93,7 +93,9 @@ const TimelineCard = ({ post }: TPost) => {
             className="flex justify-center py-2 hover:underline"
             onClick={() => setShowAllComments(true)}
           >
-            <p className="text-gray-700 font-medium cursor-pointer">Show all comments</p>
+            <p className="text-gray-700 font-medium cursor-pointer">
+              Show all {post.comments.length} comments
+            </p>
           </div>
         )}
       </div>
