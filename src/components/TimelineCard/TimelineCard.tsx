@@ -37,7 +37,7 @@ const TimelineCard = ({ post }: TPost) => {
   };
 
   return (
-    <div className="p-5 my-3 mx-1 border border-gray-300">
+    <div className="p-5 my-3 mx-1 border border-gray-300 bg-white">
       <div className="flex items-center justify-between gap-2 ">
         <div className="flex items-center gap-2">
           <Avatar>
