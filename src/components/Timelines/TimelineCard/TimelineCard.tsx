@@ -10,6 +10,13 @@ import HeartFilled from "@/utils/SVGImage/HeartFilled";
 import { cn } from "@/lib/utils";
 import { RandomNumber } from "@/utils/RandomNumber/RandomNumber";
 import { toast } from "react-toastify";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Bookmark, MessageSquareX, ShieldXIcon, UserX } from "lucide-react";
 
 type TPost = {
   post: TCombinedData;
@@ -38,7 +45,6 @@ const TimelineCard = ({ post }: TPost) => {
         <div className="flex items-center gap-2">
           <Avatar>
             <AvatarImage src={`https://randomuser.me/api/portraits/men/${RandomNumber(100)}.jpg`} />
-
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <div>
@@ -47,7 +53,27 @@ const TimelineCard = ({ post }: TPost) => {
           </div>
         </div>
         <div>
-          <MoreIcon />
+          <DropdownMenu>
+            <DropdownMenuTrigger className="focus: outline-0">
+              <MoreIcon />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem className="flex items-center gap-2 cursor-pointer">
+                <Bookmark /> <span>Save post</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="flex items-center gap-2 cursor-pointer">
+                <ShieldXIcon /> <span>Unfollow this post</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="flex items-center gap-2 cursor-pointer">
+                <MessageSquareX />
+                <span>Report Post</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="flex items-center gap-2 cursor-pointer">
+                <UserX />
+                <span>Block this user</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
       <div className="border-b border-gray-300 py-2">
