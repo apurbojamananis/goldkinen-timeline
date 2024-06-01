@@ -5,6 +5,7 @@ import { RootState } from "@/redux/store";
 import { useSelector } from "react-redux";
 import TimelineCard from "../TimelineCard/TimelineCard";
 import PostSkeleton from "../../Skeleton/PostSkeleton";
+import { TCombinedData } from "@/Types/types";
 
 const Timeline = () => {
   const [showAllPost, setShowAllPost] = useState(false);
@@ -35,7 +36,7 @@ const Timeline = () => {
 
   return (
     <div>
-      {combinedData.slice(0, showAllPost ? combinedData.length : 20).map((post) => (
+      {combinedData.slice(0, showAllPost ? combinedData.length : 20).map((post: TCombinedData) => (
         <TimelineCard key={post.id} post={post} />
       ))}
 

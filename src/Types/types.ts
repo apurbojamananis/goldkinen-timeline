@@ -42,7 +42,6 @@ export interface TCombinedData extends TPost {
   comments: TComment[];
 }
 
-
 export interface IconProps {
-  onClick?: () => void; 
+  onClick?: () => void;
 }
