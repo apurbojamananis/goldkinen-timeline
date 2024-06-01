@@ -1,6 +1,6 @@
 ## Live Site
 
-You can view the live site [here](#).
+You can view the live site [here](https://gktimeline.netlify.app/).
 
 ## Overview
 
@@ -30,6 +30,8 @@ To run this project on your local machine, follow these steps:
 1. **Clone the repository**:
    ```sh
    git clone https://github.com/apurbojamananis/goldkinen-timeline.git
+   ```
+   ```sh
    cd goldkinen-timeline
    ```
 2. **Install dependencies:**
