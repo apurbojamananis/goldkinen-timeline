@@ -1,8 +1,9 @@
-import Timeline from "./components/Timeline/Timeline";
+import Timeline from "./components/Timelines/Timeline/Timeline";
+
 
 function App() {
   return (
-    <div>
+    <div> 
       <Timeline />
     </div>
   );

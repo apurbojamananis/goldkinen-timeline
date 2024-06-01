@@ -9,7 +9,7 @@ import Comments from "@/utils/SVGImage/Comments";
 import HeartFilled from "@/utils/SVGImage/HeartFilled";
 import { cn } from "@/lib/utils";
 import { RandomNumber } from "@/utils/RandomNumber/RandomNumber";
-import { useToast } from "../ui/use-toast";
+import { toast } from "react-toastify";
 
 type TPost = {
   post: TCombinedData;
@@ -20,7 +20,6 @@ const TimelineCard = ({ post }: TPost) => {
   const [isShare, setIsShare] = useState(RandomNumber(100));
   const [isShowComment, setIsShowComment] = useState(false);
   const [showAllComments, setShowAllComments] = useState(false);
-  const { toast } = useToast();
 
   const toggleSvg = () => {
     setIsLove(!isLove);
@@ -30,10 +29,7 @@ const TimelineCard = ({ post }: TPost) => {
   };
   const sharePost = () => {
     setIsShare(() => isShare + 1);
-    toast({
-      title: "Thanks for sharing this post.",
-      duration: 1000,
-    });
+    toast.success("Thanks for sharing this post.");
   };
 
   return (

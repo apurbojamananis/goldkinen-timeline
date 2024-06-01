@@ -4,7 +4,7 @@ import { useGetCommentsQuery, useGetPostsQuery, useGetUsersQuery } from "@/redux
 import { RootState } from "@/redux/store";
 import { useSelector } from "react-redux";
 import TimelineCard from "../TimelineCard/TimelineCard";
-import PostSkeleton from "../Skeleton/PostSkeleton";
+import PostSkeleton from "../../Skeleton/PostSkeleton";
 
 const Timeline = () => {
   const [showAllPost, setShowAllPost] = useState(false);

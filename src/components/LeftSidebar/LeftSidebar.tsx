@@ -12,8 +12,15 @@ import {
 } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const LeftSidebar = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Add smooth scrolling behavior
+    });
+  };
   return (
     <div className="flex flex-col justify-between min-h-screen py-5 px-5">
       <div>
@@ -26,6 +33,7 @@ const LeftSidebar = () => {
         <ul className="flex flex-col gap-3 py-5 border-b border-gray-300 scroll-smooth">
           <Link
             to="/"
+            onClick={scrollToTop}
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
           >
             {" "}
@@ -35,6 +43,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             {" "}
             <BellRing />
@@ -43,6 +56,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             <BookMarkedIcon />
             <span>Bookmarks</span>
@@ -50,6 +68,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             <GroupIcon />
             <span>Communities</span>
@@ -57,6 +80,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             <ListIcon />
             <span>Reading List</span>
@@ -64,6 +92,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             <VideoIcon />
             <span>Videos</span>
@@ -71,6 +104,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             <Building2 />
             <span>About</span>
@@ -78,6 +116,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             <Contact2 />
             <span>Contact</span>
@@ -85,6 +128,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             <BadgeHelp />
             Guides
@@ -92,6 +140,11 @@ const LeftSidebar = () => {
           <Link
             to="/"
             className="font-semibold hover:bg-gray-500 hover:text-white px-5 py-3 rounded transition-all flex gap-3 items-center"
+            onClick={() => {
+              toast.success("We are working on this!", {
+                autoClose: 1000,
+              });
+            }}
           >
             <User />
             Profile

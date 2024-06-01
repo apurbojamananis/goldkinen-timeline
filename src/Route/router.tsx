@@ -1,7 +1,7 @@
 import App from "@/App";
 import ErrorPage from "@/Pages/ErrorPage/ErrorPage";
-import Test from "@/Pages/test/Test";
 import MainLayout from "@/components/Layout/MainLayout";
+import TimelinePost from "@/components/Timelines/TimelinePost/TimelinePost";
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
@@ -16,8 +16,8 @@ export const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "test",
-        element: <Test />,
+        path: "/post",
+        element: <TimelinePost />,
       },
     ],
   },

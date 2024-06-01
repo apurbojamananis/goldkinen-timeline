@@ -1,7 +1,9 @@
 import { Outlet } from "react-router-dom";
-import { Toaster } from "@/components/ui/toaster";
+
 import LeftSidebar from "../LeftSidebar/LeftSidebar";
 import RightSidebar from "../RightSidebar/RightSidebar";
+import { Slide, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const MainLayout = () => {
   return (
@@ -13,9 +15,15 @@ const MainLayout = () => {
         >
           <LeftSidebar />
         </div>
-        <div className="col-span-6 ">
+        <div className="col-span-6 bg-white">
           <Outlet />
-          <Toaster />
+          <ToastContainer
+            position="top-center"
+            autoClose={2000}
+            hideProgressBar
+            theme="colored"
+            transition={Slide}
+          />
         </div>
         <div
           className="col-span-3 bg-white max-h-screen overflow-y-auto"
