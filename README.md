@@ -1,6 +1,4 @@
-## Live Site
-
-You can view the live site [here](https://gktimeline.netlify.app/).
+## Live Site: [Click here](https://gktimeline.netlify.app/)
 
 ## Overview
 
