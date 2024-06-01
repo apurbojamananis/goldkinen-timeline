@@ -11,7 +11,8 @@ This project is a frontend for a microservice backend forum website, built using
 - **User-Friendly Interface**: Responsive and interactive UI built with React and Tailwind CSS.
 - **Type Safety**: Leveraging TypeScript for type safety and better development experience.
 - **State Management**: Using Redux and RTK Query for efficient state management and data fetching.
-- **Component Library**: Utilizing Shadcn for reusable and consistent UI components.
+- **Data Memoization**: Efficient data handling using RTK Query's `createSelector` for memoization.
+- **Component Library**: Utilizing Shadcn/ui for reusable and consistent UI components.
 - **Optimized Performance**: Following best practices for performance optimization.
 
 ## Technologies Used
